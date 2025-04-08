@@ -2,20 +2,21 @@
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
-    <title>Tailwind PlayCDN</title>
+    <title>Lab04 - Tailwind</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     
-    <header class="border-b shadow shadow-gray-400">
-      <div class="w-full px-6 py-4 flex flex-col md:flex-row md:items-center md:justify-between max-w-screen-xl mx-auto">
+    <header class="border-b shadow shadow-gray-400 bg-white">
+      <div class="w-full px-6 py-4 flex flex-col sm:flex-col md:flex-row md:items-center md:justify-between max-w-screen-xl mx-auto">
         
         <div class="flex items-center gap-2 mb-4 md:mb-0">
           <img src="img/logo-pjatk.png" class="h-8 w-auto" alt="Logo PJATK">
           <h4 class="font-semibold text-gray-800">PJATK</h4>
         </div>
 
-        <ul class="flex flex-col gap-2 md:flex-row md:gap-6 text-gray-700">
+        <ul class="flex flex-col sm:flex-col md:flex-row gap-2 md:gap-6 text-gray-700">
           <li><a href="#" class="hover:text-blue-600 transition">Strona główna</a></li>
           <li><a href="#" class="hover:text-blue-600 transition">O nas</a></li>
           <li><a href="#" class="hover:text-blue-600 transition">Oferta</a></li>
@@ -27,17 +28,12 @@
     </header>
 
     <section>
-      <div class="w-full flex flex-col items-center py-4">
-        <h1 class="font-bold text-6xl py-4">Polsko-Japońska</h1>
-        <h4 class="text-2xl">Akademia Technik Komputerowych</h4>
-        <div class="flex gap-4 py-2">
-          <button class="bg-blue-200 px-4 py-2 rounded">
-            Dla studentów
-          </button>
-          
-          <button class="bg-blue-400 px-4 py-2 rounded">
-            Dla kandydatów
-          </button>
+      <div class="w-full flex flex-col items-center py-10 px-4 text-center">
+        <h1 class="font-bold text-4xl sm:text-5xl md:text-6xl py-4">Polsko-Japońska</h1>
+        <h4 class="text-xl sm:text-2xl">Akademia Technik Komputerowych</h4>
+        <div class="flex flex-col sm:flex-row gap-4 py-4">
+          <button class="bg-blue-200 px-4 py-2 rounded">Dla studentów</button>
+          <button class="bg-blue-400 px-4 py-2 rounded">Dla kandydatów</button>
         </div>
       </div>
     </section>
@@ -45,39 +41,39 @@
     <section class="bg-gray-100 py-20">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 max-w-screen-xl mx-auto">
 
-        <div class="rounded-lg shadow-md w-full sm:w-96">
-          <img src="img/sala-wykladowa.png" alt="Sala wykładowa" class="w-full h-48 object-cover rounded-t-lg">
+        <div class="rounded-lg shadow-md bg-white overflow-hidden">
+          <img src="img/sala-wykladowa.png" alt="Sala wykładowa" class="w-full h-48 object-cover">
           <div class="p-4">
             <h3 class="font-bold">Aktualność 1</h3>
             <p class="text-sm text-gray-600 mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             <a href="#" class="text-sm text-indigo-600 mt-3 inline-block hover:underline">Więcej</a>
           </div>
         </div>
-    
-        <div class="rounded-lg shadow-md w-full sm:w-96">
-          <img src="img/sala-wykladowa.png" alt="Sala wykładowa" class="w-full h-48 object-cover rounded-t-lg">
+
+        <div class="rounded-lg shadow-md bg-white overflow-hidden">
+          <img src="img/sala-wykladowa.png" alt="Sala wykładowa" class="w-full h-48 object-cover">
           <div class="p-4">
             <h3 class="font-bold">Aktualność 2</h3>
             <p class="text-sm text-gray-600 mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             <a href="#" class="text-sm text-indigo-600 mt-3 inline-block hover:underline">Więcej</a>
           </div>
         </div>
-    
-        <div class="rounded-lg shadow-md w-full sm:w-96">
-          <img src="img/sala-wykladowa.png" alt="Sala wykładowa" class="w-full h-48 object-cover rounded-t-lg">
+
+        <div class="rounded-lg shadow-md bg-white overflow-hidden">
+          <img src="img/sala-wykladowa.png" alt="Sala wykładowa" class="w-full h-48 object-cover">
           <div class="p-4">
             <h3 class="font-bold">Aktualność 3</h3>
             <p class="text-sm text-gray-600 mt-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             <a href="#" class="text-sm text-indigo-600 mt-3 inline-block hover:underline">Więcej</a>
           </div>
         </div>
-    
+
       </div>
     </section>
 
-    <footer class="bg-gray-900 text-white py-6">
-      <div class="max-w-screen-xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
-    
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="max-w-screen-xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 md:text-left">
+
         <div>
           <h4 class="font-semibold mb-4">O nas</h4>
           <ul class="space-y-2 text-sm text-gray-300">
@@ -86,7 +82,7 @@
             <li><a href="#" class="hover:underline">Specjalności</a></li>
           </ul>
         </div>
-    
+
         <div>
           <h4 class="font-semibold mb-4">Oferta</h4>
           <ul class="space-y-2 text-sm text-gray-300">
@@ -95,7 +91,7 @@
             <li><a href="#" class="hover:underline">Studia podyplomowe</a></li>
           </ul>
         </div>
-    
+
         <div>
           <h4 class="font-semibold mb-4">Kariera</h4>
           <ul class="space-y-2 text-sm text-gray-300">
@@ -104,7 +100,7 @@
             <li><a href="#" class="hover:underline">Kursy</a></li>
           </ul>
         </div>
-    
+
         <div>
           <h4 class="font-semibold mb-4">Więcej</h4>
           <ul class="space-y-2 text-sm text-gray-300">
@@ -112,10 +108,9 @@
             <li><a href="#" class="hover:underline">Polityka prywatności</a></li>
           </ul>
         </div>
-    
+
       </div>
     </footer>
-    
-    
+
   </body>
 </html>
