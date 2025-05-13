@@ -1,0 +1,7 @@
+.dynamic-div {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    background-color: lightgray;
+    display: inline-block;
+}

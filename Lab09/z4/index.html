@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lightbox Gallery</title>
+</head>
+<body>
+    <div class="gallery">
+        <img src="/img/image1.jpg" alt="Image 1" onclick="openLightbox(this)">
+        <img src="/img/image2.jpg" alt="Image 2" onclick="openLightbox(this)">
+        <img src="/img/image3.jpg" alt="Image 3" onclick="openLightbox(this)">
+        <img src="/img/image1.jpg" alt="Image 1" onclick="openLightbox(this)">
+        <img src="/img/image2.jpg" alt="Image 2" onclick="openLightbox(this)">
+        <img src="/img/image3.jpg" alt="Image 3" onclick="openLightbox(this)">
+        <img src="/img/image1.jpg" alt="Image 1" onclick="openLightbox(this)">
+        <img src="/img/image2.jpg" alt="Image 2" onclick="openLightbox(this)">
+        <img src="/img/image3.jpg" alt="Image 3" onclick="openLightbox(this)">
+        <img src="/img/image1.jpg" alt="Image 1" onclick="openLightbox(this)">
+    </div>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

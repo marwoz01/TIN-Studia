@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="calculator">
+        <div id="result">0</div>
+        <div id="inputs">    
+            <input type="number" id="firstNumber" placeholder="Pierwsza liczba">
+            <input type="number" id="secondNumber" placeholder="Druga liczba">
+            <select id="operation">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+            <button onclick="calculate()">Oblicz</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
