@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #eee;
+}
+
+.up {
+    color: green;
+}
+
+.down {
+    color: red;
+}
+
+.same {
+    color: grey;
+}
+
+#news {
+    font-style: italic;
+    height: 1.5em;
+}
+
+@media (max-width: 600px) {
+    table, th, td {
+        font-size: 12px;
+    }
+}
