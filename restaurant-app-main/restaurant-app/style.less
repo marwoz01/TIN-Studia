@@ -1,0 +1,542 @@
+/* Zmienne LESS */
+@main-color: red;
+@text-color: #fff;
+@text-muted: #aaa;
+@bg-dark: #181818;
+@font-main: "Poppins", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: @font-main;
+  color: @text-color;
+  scroll-behavior: smooth;
+}
+
+/* ---------- STRUKTURA ---------- */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem 0;
+
+  &.hero,
+  &.menu,
+  &.contact {
+    display: flex;
+  }
+
+  &.hero {
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  &.menu {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &.contact {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+}
+
+.hero-background {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent 30%),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent 30%),
+    url("./img/background_basic.png");
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(6px);
+}
+
+header .container,
+.hero .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero .container {
+  padding: 12rem 0;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-area {
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    .dot {
+      color: @main-color;
+    }
+  }
+
+  .subtitle {
+    font-size: 0.75rem;
+    color: @text-muted;
+    margin-top: 0.25rem;
+  }
+}
+
+/* ---------- NAWIGACJA ---------- */
+.main-nav ul,
+.menu ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+
+  li a {
+    color: @text-color;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+
+    &:hover {
+      color: @main-color;
+      transition: 0.2s ease-out;
+    }
+  }
+}
+
+/* ---------- PANEL INFORMACYJNY ---------- */
+.info-panel {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+
+  i {
+    color: @main-color;
+  }
+
+  .cart,
+  .delivery-time,
+  .phone {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+
+    .price,
+    .callback,
+    span,
+    small,
+    a {
+      color: @text-color;
+      font-weight: bold;
+    }
+  }
+}
+
+/* ---------- PANEL KOSZYKA ---------- */
+#cart-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+
+  i {
+    color: @main-color;
+  }
+
+  span {
+    color: @main-color;
+    font-weight: bold;
+  }
+}
+
+#cart-panel {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 300px;
+  height: 100vh;
+  background: black;
+  transition: right 0.3s ease;
+  z-index: 999;
+  padding: 20px;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3);
+
+  &.open {
+    right: 0;
+  }
+}
+
+#cart-summary {
+  margin-top: 1rem;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  #cart-total {
+    font-weight: bold;
+    font-size: 1rem;
+    color: @text-color;
+  }
+
+  #checkout-btn {
+    background-color: @main-color;
+    color: @text-color;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5em 1.2em;
+    cursor: pointer;
+  }
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  display: flex;
+  height: auto;
+
+  h1 {
+    font-size: 4.2rem;
+    line-height: 1.25;
+    max-width: 16ch;
+    padding: 1rem 0;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: @text-muted;
+    max-width: 40ch;
+    padding: 1rem 0;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    width: 100%;
+  }
+
+  &.about {
+    img {
+      max-width: 600px;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    p {
+      max-width: 50ch;
+    }
+  }
+}
+
+/* ---------- ZAMÓWIENIE ---------- */
+.order-box {
+  display: flex;
+  gap: 2rem;
+
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+.btn {
+  background-color: @main-color;
+  color: @text-color;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75em 2em;
+  cursor: pointer;
+  box-shadow: 0 0 20px fade(@main-color, 30%);
+  transition: 0.1s ease-in;
+
+  &:hover {
+    box-shadow: 0 0 30px fade(@main-color, 45%);
+    transition: 0.2s ease-out;
+  }
+}
+
+/* ---------- MENU ---------- */
+.menu h1 {
+  font-size: 4rem;
+}
+
+.menu-items,
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.categories-nav ul {
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 300px;
+  flex-shrink: 0;
+  background-color: @bg-dark;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .card-content {
+    margin-top: 1rem;
+
+    h2,
+    h3,
+    p {
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.85rem;
+      color: #ccc;
+    }
+  }
+}
+
+/* ---------- KONTAKT ---------- */
+.contact {
+  padding: 4rem 0;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+
+  &-text {
+    flex: 1 1 300px;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 0.75rem;
+      color: @text-muted;
+      line-height: 1.5;
+    }
+
+    a {
+      color: @main-color;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-map {
+    flex: 1 1 300px;
+  }
+}
+
+/* ---------- OKNO ZAMÓW ---------- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modal-content {
+    background: @bg-dark;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    color: @text-color;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    position: relative;
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.25rem;
+      border-radius: 6px;
+      border: none;
+      font-size: 1rem;
+    }
+
+    .btn {
+      margin-top: 1.5rem;
+      width: 100%;
+      font-size: 1.1rem;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.8rem;
+      font-size: 2rem;
+      cursor: pointer;
+      color: @main-color;
+    }
+  }
+}
+
+/* ---------- MEDIA ---------- */
+
+@media (max-width: 1600px) {
+  .hero .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .hero .container {
+    padding: 0;
+  }
+
+  .hero-left-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-left-info,
+  .hero-right-info {
+    width: 100%;
+  }
+
+  .hero img {
+    width: 60%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    width: 95%;
+  }
+
+  .main-nav ul#menu-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 8%;
+    right: 0;
+    background: @bg-dark;
+    border-radius: 6px;
+    width: 180px;
+    padding: 1rem;
+    z-index: 1000;
+  }
+
+  .main-nav ul#menu-list.active {
+    display: flex;
+  }
+
+  #menu-toggle {
+    display: block;
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: @main-color;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    z-index: 1001;
+  }
+
+  .hero-left-info {
+    h1 {
+      font-size: 2.2rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+  }
+
+  .contact .container {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1001px) {
+  #menu-toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .info-panel {
+    gap: 1rem;
+
+    .cart,
+    .delivery-time,
+    .phone {
+      font-size: 0.4rem;
+
+      .price,
+      .callback,
+      span,
+      small,
+      a {
+        color: @text-color;
+        font-weight: bold;
+      }
+    }
+  }
+}
